@@ -1,6 +1,6 @@
 using Scalar.AspNetCore;
 
-namespace Marketplace;
+namespace API;
 
 public class Program
 {

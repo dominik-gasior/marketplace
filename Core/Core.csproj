@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="Features\Products\GetProducts\" />
+      <Folder Include="Features\Products\GetProduct\" />
+      <Folder Include="Features\Transactions\Buyer\CreateTransaction\" />
+      <Folder Include="Features\Transactions\Buyer\DeleteTransaction\" />
+      <Folder Include="Features\Transactions\Buyer\GetTransactions\" />
+      <Folder Include="Features\Transactions\Seller\CreateTransaction\" />
+      <Folder Include="Features\Transactions\Seller\DeleteTransaction\" />
+      <Folder Include="Features\Transactions\Seller\GetTransactions\" />
+    </ItemGroup>
+
+</Project>
