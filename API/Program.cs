@@ -10,6 +10,7 @@ public class Program
         
         builder.Services.AddAuthorization();
         builder.Services.AddOpenApi();
+        builder.Services.AddControllers();
 
         var app = builder.Build();
         
@@ -21,7 +22,12 @@ public class Program
 
         app.UseHttpsRedirection();
         app.UseAuthorization();
-
+        app.UseRouting();
+        app.UseEndpoints(endpoints =>
+        {
+            endpoints.MapControllers();
+        });
+        
         app.Run();
     }
 }

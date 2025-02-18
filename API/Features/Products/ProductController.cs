@@ -15,7 +15,7 @@ public class ProductController : ControllerBase
         _mediator = mediator;
     }
 
-    [Route("{id}")]
+    [HttpGet("{id}")]
     public async Task<IActionResult> GetProducts([FromRoute] Guid id)
     {
         var request = new GetProductRequest(id);
