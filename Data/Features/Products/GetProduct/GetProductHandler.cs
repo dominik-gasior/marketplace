@@ -14,7 +14,7 @@ public class GetProductHandler : IRequestHandler<GetProductRequest, Result<Produ
         _context = context;
     }
 
-    public async Task<Result<ProductDTO>> Handle(GetProductRequest request, CancellationToken token = default)
+    public async Task<Result<ProductDTO>> HandleAsync(GetProductRequest request, CancellationToken token = default)
     {
         var product = await _context.Products
             .Where(p => p.Id == request.ProductId)

@@ -1,3 +1,4 @@
+using API.Utils.Extensions;
 using Core.Utils.Handling;
 using Data.Features.Products.GetProduct;
 using Microsoft.AspNetCore.Mvc;
@@ -21,6 +22,6 @@ public class ProductController : ControllerBase
         var request = new GetProductRequest(id);
         var result = await _mediator.SendAsync(request);
 
-        return Ok(result.Value); // TODO Result extension methodw
+        return result.ToActionResult();
     }
 }

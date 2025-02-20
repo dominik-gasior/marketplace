@@ -11,4 +11,12 @@ public class MarketplaceContext : DbContext
     public DbSet<PriceProduct> PriceProducts { get; set; }
     public DbSet<Transaction> Transactions { get; set; }
     public DbSet<User> Users { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.HasDefaultSchema("dbo");
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(MarketplaceContext).Assembly);
+        
+        base.OnModelCreating(modelBuilder);
+    }
 }

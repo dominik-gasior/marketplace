@@ -1,3 +1,4 @@
+using API.Utils.Registrations;
 using Scalar.AspNetCore;
 
 namespace API;
@@ -7,6 +8,10 @@ public class Program
     public static void Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
+
+        builder.Services.AddRepositories();
+        builder.Services.AddMediator();
+        builder.Services.AddDatabaseContext(builder.Configuration);
         
         builder.Services.AddAuthorization();
         builder.Services.AddOpenApi();
