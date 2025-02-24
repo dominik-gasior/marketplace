@@ -17,7 +17,8 @@ public class ProductController : ControllerBase
     }
 
     [HttpGet("{id}")]
-    public async Task<IActionResult> GetProducts([FromRoute] Guid id)
+    // TODO dokumentacja
+    public async Task<IActionResult> GetProduct([FromRoute] Guid id)
     {
         var request = new GetProductRequest(id);
         var result = await _mediator.SendAsync(request);

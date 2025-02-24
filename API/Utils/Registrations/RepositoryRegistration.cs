@@ -7,7 +7,7 @@ internal static class RepositoryRegistration
 {
     public static void AddRepositories(this IServiceCollection services)
     {
-        services.Scan(scan => scan .FromAssemblyOf<TransactionRepository>()
+        services.Scan(scan => scan.FromAssemblyOf<TransactionRepository>()
             .AddClasses(classes => classes.AssignableTo<ITransactionRepository>())
             .AsImplementedInterfaces()
             .WithTransientLifetime()); 
