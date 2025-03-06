@@ -50,4 +50,9 @@ public class Transaction
         ProductID = productId;
         Price = price;
     }
+
+    private Transaction()
+    {
+
+    }
 }

@@ -21,4 +21,11 @@ public record Name
 
         return new Name(name);
     }
+
+    public static implicit operator string(Name name) => name.Value;
+
+    private Name()
+    {
+
+    }
 }

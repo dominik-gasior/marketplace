@@ -21,4 +21,11 @@ public record Phone
 
         return new Phone(phone);
     }
+
+    public static implicit operator string(Phone phone) => phone.Value;
+
+    private Phone()
+    {
+
+    }
 }

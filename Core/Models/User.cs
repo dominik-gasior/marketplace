@@ -45,4 +45,9 @@ public class User
         Password = password;
         Address = address;
     }
+
+    private User()
+    {
+
+    }
 }

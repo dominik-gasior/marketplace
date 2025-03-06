@@ -43,4 +43,9 @@ public record Address
 
         return new Address(street, number, city, state, zipCode);
     }
+
+    private Address()
+    {
+
+    }
 }

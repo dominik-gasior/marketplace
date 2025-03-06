@@ -9,7 +9,7 @@ internal static class DbContextRegistration
     {
         services.AddDbContext<MarketplaceContext>(options =>
         {
-            options.UseNpgsql(configuration.GetConnectionString("ConnectionString"));
+            options.UseNpgsql(configuration.GetConnectionString("DefaultConnection"));
         });
     }
 }

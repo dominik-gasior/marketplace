@@ -4,7 +4,7 @@ namespace Core.ValueObjects;
 
 public record Percentage
 {
-    private decimal Value { get; init; }
+    public decimal Value { get; init; }
 
     private Percentage(decimal value)
     {
@@ -37,4 +37,9 @@ public record Percentage
 
     public static implicit operator Percentage(decimal value)
         => new(value);
+
+    private Percentage()
+    {
+
+    }
 }

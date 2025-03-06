@@ -4,9 +4,9 @@ namespace Core.ValueObjects;
 
 public record PositiveNumber
 {
-    private decimal Value { get; }
+    public decimal Value { get; }
 
-    public PositiveNumber(decimal value)
+    private PositiveNumber(decimal value)
     {
         if (value < 0)
         {
@@ -21,4 +21,9 @@ public record PositiveNumber
     public static implicit operator PositiveNumber(decimal value) => new(value);
 
     public override string ToString() => Value.ToString(CultureInfo.InvariantCulture);
+
+    private PositiveNumber()
+    {
+
+    }
 }

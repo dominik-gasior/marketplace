@@ -1,3 +1,4 @@
+using API.Utils.Extensions;
 using API.Utils.Registrations;
 using Scalar.AspNetCore;
 
@@ -32,7 +33,9 @@ public class Program
         {
             endpoints.MapControllers();
         });
-        
+
+        app.InitializeDatabase();
+
         app.Run();
     }
 }

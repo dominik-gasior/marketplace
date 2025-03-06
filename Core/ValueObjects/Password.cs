@@ -26,4 +26,9 @@ public record Password
 
     public static implicit operator string(Password password) => password.Hash;
     public static implicit operator Password(string password) => new(password);
+
+    private Password()
+    {
+
+    }
 }
